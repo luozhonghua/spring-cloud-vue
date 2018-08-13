@@ -1,0 +1,56 @@
+第一步：建立git仓库 
+cd到你的本地项目根目录下，执行git命令
+
+git init
+1
+第二步：将项目的所有文件添加到仓库中
+
+git add .
+1
+如果想添加某个特定的文件，只需把.换成特定的文件名即可
+
+第三步：将add的文件commit到仓库
+ 
+1. git commit -m "备注说明"
+
+这个命令表示添加备注
+
+4........................
+
+git remote add origin https://github.com/luozhonghua/SSM
+
+https://github.com/luozhonghua/incubator-dubbo.git
+
+https://github.com/luozhonghua/dubbo-spiDemo
+
+https://github.com/luozhonghua/spring-cloud-dubbo
+
+
+https://github.com/luozhonghua/spring-cloud-config-repository
+
+
+5
+
+git pull origin master
+
+6
+
+ git push -u origin master:master
+
+ 
+ git pull origin master  --allow-unrelated-histories
+ 
+提交到Git仓库。这里master为我自己的分支的名称，实际应用中，你要改成自己的分支的名称
+
+
+--git一个分支
+--git clone -b dubbo-2.6.0 https://github.com/apache/incubator-dubbo.git
+
+
+
+--luozhonghua
+git clone -b dubbo-2.6.0 https://github.com/luozhonghua/incubator-dubbo.git
+
+
+--本地分支，远程分支提交  创建本地git branch [分支名称]    远程和本地所有分支  git branch -a
+https://www.cnblogs.com/JennyLin77/p/git.html
