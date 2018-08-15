@@ -106,7 +106,9 @@
             if (this.password) {
               this.form.password = this.password
             }
-            this.apiPost('admin/users/update/', this.id, this.form).then((res) => {
+            console.info(this.id)
+            console.info(this.form.password)
+            this.apiPost('admin/users/update/', this.form).then((res) => {
               this.handelResponse(res, (data) => {
                 _g.toastMsg('success', '添加成功')
                 _g.clearVuex('setUsers')
@@ -145,9 +147,10 @@
       async getCompleteData() {
         this.getAllOrgs()
         this.groupOptions = await this.getAllGroups()
-        this.apiGet('admin/users/' + this.id).then((res) => {
+        this.apiGet('admin/users/edit/' + this.id).then((res) => {
           console.log('res = ', _g.j2s(res))
           this.handelResponse(res, (data) => {
+            this.form.id = this.id
             this.form.username = data.username
             this.form.realname = data.realname
             this.form.structure_id = data.structure_id
