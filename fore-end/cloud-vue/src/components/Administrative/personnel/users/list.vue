@@ -21,7 +21,7 @@
 			width="50">
 			</el-table-column>
 			<el-table-column
-			prop="s_name"
+			prop="sname"
 			label="所属组织架构">
 			</el-table-column>
 			<el-table-column
@@ -87,7 +87,7 @@
         currentPage: null,
         realname: '',
         multipleSelection: [],
-        limit: 1
+        limit: 10
       }
     },
     methods: {
@@ -124,6 +124,7 @@
         this.loading = true
         const data = {
           params: {
+            sname: this.sname,
             realname: this.realname,
             page: this.currentPage,
             rows: this.limit
